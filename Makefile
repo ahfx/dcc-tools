@@ -1,9 +1,9 @@
-.PHONY: venv
+.PHONY: env
 
-venv: venv/Scripts/activate
+env: env/Scripts/activate
 
-venv/Scripts/activate:
-	python -m virtualenv -p python3 venv
+env/Scripts/activate:
+	python -m virtualenv -p python3 env
 	pip install --upgrade pip
 
 install-local:
@@ -14,8 +14,8 @@ install-remote:
 	# update local packages to remote address
 	pip install . -t ${TOOLS_INST_PATH}/dcc-tools
 
-clean-venv:
-	rm -fr dcc-tools-venv
+clean-env:
+	rm -fr dcc-tools-env
 
 clean: 
 	rm -fr ${TOOLS_INST_PATH}/dcc-tools

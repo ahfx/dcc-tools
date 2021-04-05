@@ -1,4 +1,3 @@
-def hello_world():
-	print("hello_world from dcc_tools!!!")
-
-hello_world()
+"""
+dcc_tools - a package for common Digital Content Creation scripts
+"""
